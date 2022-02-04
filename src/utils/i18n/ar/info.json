@@ -1,0 +1,10 @@
+{
+    "permissionAssigned": "تم تعيين الصلاحيات بنجاح للدور {role}",
+    "roleAssigned": "تم تعيين الدور {role} بنجاح للمستخدم {user}",
+    "emailVerified": "تم التحقق من البرد الإلكتروني بنجاح",
+    "emailSent": "{email}: تم إرسال  الرابط إلى الإيميل  ",
+    "passwordUpdated": "تم تحديث الرقم السري بنجاح",
+    "invitationSent": "تم إرسال الدعوة بنجاح",
+    "invitationCancelled":"تم إلغاء الدعوة بنجاح",
+    "accountCreated":"تم إنشاء الحساب بنجاح"
+}

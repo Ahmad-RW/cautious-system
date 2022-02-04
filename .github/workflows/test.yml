@@ -1,0 +1,40 @@
+
+name: Running tests cases
+
+on: [pull_request]
+
+
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: ctb_api_test
+        ports:
+        - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+      redis:
+       image: "redis:6.2.6"
+       ports:
+       - "6379:6379"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Installing Dependencies
+        run: npm i
+
+      - name: Preparing environment variables
+        run: cp .env.ci .env
+
+      - name: Running tests
+        env:
+          DEFAULT_BRANCH: ${{ github.base_ref	}}
+        run: npm run local:test

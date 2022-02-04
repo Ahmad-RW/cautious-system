@@ -1,0 +1,10 @@
+{
+    "permissionAssigned": "Permissions has been successfully assigned to {role}",
+    "roleAssigned": "Role {role} has been successfully assigned to {user}",
+    "emailVerified": "Email Activated Successfully",
+    "emailSent": "Link has been sent to email: {email}",
+    "passwordUpdated": "password updated successfully",
+    "invitationSent": "Invitation sent successfully",
+    "invitationCancelled":"Invitation cancelled successfully",
+    "accountCreated":"Account created successfully"
+}

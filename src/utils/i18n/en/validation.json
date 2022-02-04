@@ -1,0 +1,9 @@
+{
+    "isEmail": "It is not an email ", 
+    "isNotEmpty": "Email is required",
+    "invalidInvitationEmail": "Invitation with this email already exists",
+    "usernameAvailability": "Username available",
+    "emailAvailability": "Email available",
+    "validRole": "Please enter a valid type",
+    "invalidInvitation": "Invalid Invitation "
+}

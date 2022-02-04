@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+ ctb-api:
+  user: root
+  container_name: ctb_api
+  build:
+    context: ../
+    dockerfile : docker/Dockerfile 
+    target: development 
+  restart: on-failure:3
+  ports:
+   - 3001:3000
+  environment:
+  # We want the following to be always picked from docker compose and not modified by developer
+    - DB_HOST=ctb-db
+    - DB_PORT=5432
+    - DB_USERNAME=postgres
+    - DB_PASSWORD=postgres
+    - DB_NAME=ctb_api
+    - TEST_DB_HOST=ctb-test-db
+    - TEST_DB_PORT=5432
+    - TEST_DB_USERNAME=postgres
+    - TEST_DB_PASSWORD=postgres
+    - TEST_DB_NAME=ctb_api_test
+    - JWT_SECRET=SECRET
+    - REDIS_PORT=6379
+    - REDIS_HOST=redis
+  env_file:
+    - ../.env
+  volumes:
+    - ../src:/home/node/src
+    - ../test:/home/node/test
+    - ../package.json:/home/node/package.json
+  command: bash -c "npm run start:dev"
+  depends_on:
+    - ctb-db
+    - ctb-test-db
+
+ ctb-db:
+  image: postgres:14
+  restart: on-failure:3
+  ports:
+    - 15432:5432
+  environment:
+    - TZ=Asia/Riyadh
+    - POSTGRES_PASSWORD=postgres
+    - POSTGRES_USER=postgres
+    - POSTGRES_DB=ctb_api
+  volumes:
+    - ctb-db-data:/var/lib/postgres/data
+
+ ctb-test-db:
+    image: postgres:14
+    ports:
+      - 25432:5432
+    restart: always
+    environment:
+     - TZ=Asia/Riyadh
+     - POSTGRES_PASSWORD=postgres
+     - POSTGRES_USER=postgres
+     - POSTGRES_DB=ctb_api_test
+    volumes:
+      - ctb-test-db-data:/var/lib/postgres/data
+ redis:
+  image: "redis:6.2.6"
+  ports:
+  - "16379:6379"
+
+volumes:
+  ctb-db-data:
+  ctb-test-db-data:

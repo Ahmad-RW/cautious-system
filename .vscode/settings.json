@@ -1,0 +1,7 @@
+{
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "eslint.validate": ["typescript"],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}

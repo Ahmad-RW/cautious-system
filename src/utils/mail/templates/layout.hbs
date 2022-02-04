@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@200&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'SF Pro Rounded';
+            src: url("./fonts/SF-Pro-Rounded-Regular.woff");
+        }
+
+        .ar {
+            font-family: 'Noto Sans Arabic', sans-serif;
+        }
+
+        .en {
+            font-family: 'SF Pro Rounded', sans-serif;
+        }
+
+        table {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            justify-content: center;
+            padding-bottom: 200px;
+            background-color: rgba(27, 24, 48, 1);
+        }
+
+        .ctb {
+            justify-content: center;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            background-color: rgba(34, 30, 61, 1);
+            width: 100vw;
+            margin-left: auto;
+            max-width: 100%;
+            color: rgba(255, 255, 255, 1);
+            font-size: 27.649999618530273px;
+            line-height: 40px;
+            letter-spacing: 0;
+            text-align: center;
+            margin-right: auto;
+        }
+
+        .title {
+            max-width: 302px;
+            color: rgba(249, 246, 253, 1);
+            font-size: 23.040000915527344px;
+            line-height: 34px;
+            letter-spacing: 0%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 700;
+        }
+
+        p {
+            margin-top: 24px;
+            color: rgba(249, 246, 253, 1);
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: center;
+            padding-left: 25%;
+            padding-right: 25%;
+            line-height: 150%;
+            white-space: pre-line !important;
+            display: block; 
+          }
+
+        button {
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            justify-content: center;
+            margin-top: 24px;
+            border-radius: 6px;
+            box-shadow: 0px 6px 40px 0px rgba(112, 68, 244, 0.25);
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-right: 32px;
+            padding-left: 32px;
+            background-color: rgba(112, 68, 244, 1);
+            margin-left: auto;
+            margin-right: auto;
+            border: 0;
+        }
+
+        a {
+            color: rgba(255, 255, 255, 1);
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: center;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="width:100%; mr-auto; ml-auto">
+        <tr>
+            <th class="ctb en">
+                CTB
+            </th>
+        </tr>
+        <br />
+        <br />
+        <br />
+        <tr class="title">
+            <td class="ar">
+                {{> title-ar }}
+            </td>
+        </tr>
+        <tr>
+            <td class="ar">
+                <p>
+                    {{> content-ar }}
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="en">
+                    <a href={{url}}>
+                        {{> button-ar }}
+                    </a>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td class="ar">
+                <p class="ar">
+                    أو بإمكانك نسخ الرابط التالي في متصفحك
+                    <br>
+                    {{ url }}
+                </p>
+            </td>
+        </tr>
+        <br />
+        <br />
+        <br />
+        <tr class="title">
+            <td class=" en">
+                {{> title-en }}
+            </td>
+        </tr>
+        <tr>
+            <td class="en">
+                <p>
+                    {{> content-en }}
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="en">
+                    <a href={{url}}>
+                        {{> button-en }}
+                    </a>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td class="en">
+                <p>
+                    or paste this link into your browser
+                    <br>
+                    {{ url }}
+                </p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

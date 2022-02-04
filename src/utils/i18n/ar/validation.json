@@ -1,0 +1,10 @@
+{
+    "isEmail": "البريد الإلكتروني غير صالح ",
+    "isNotEmpty": "البريد الالكتروني مطلوب",
+    "invalidInvitationEmail": "دعوة سابقة لهذا البريد الإلكتروني موجودة",
+    "usernameAvailability": "إسم المستخدم متاح",
+    "emailAvailability": "البريد الإليكتروني متاح",
+    "validRole": "الرجاء إدخال دور صحيح",
+    "invalidInvitation": "دعوة غير صالحة"
+    
+}

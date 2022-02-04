@@ -1,0 +1,25 @@
+{
+    "exceptions": {
+        "forbidden": "Access Denied",
+        "unauthorized": "Unauthorized. Please Login",
+        "notFound": "Not Found",
+        "unprocessableEntity": "Wrong Input",
+        "notImplemented": "Not Implemented",
+        "badRequest": "Bad Request"
+    },
+    "invalidToken": "Invalid Token",
+    "invalidEmail": "Invalid Email",
+    "emailDoesntExist": "Email doesn't exist",
+    "accountAlreadyActivated": "Account already activated",
+    "fileDoesntExist": "file doesn't exists",
+    "emailOrUsernameExists": "Email or Username with same credentials already exists",
+    "auth" :{
+        "newPasswordEqualsOld" : "New password should not equal old password",
+        "currentPasswordNotCorrect" : "Current password is not correct"
+    },
+    "invalidTimezone": "The Timezone is not a valid code",
+    "transition": "Cannot apply transition from {from} to {to}",
+    "invalidUsername": "Username has invalid characters",
+    "validType": "Please enter a valid type",
+    "weakPassword": "Password is too weak"
+}

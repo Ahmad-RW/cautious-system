@@ -1,0 +1,21 @@
+
+name: Checking Coding Standard
+
+
+on: [pull_request]
+
+jobs:
+
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Packages
+        run: npm i
+
+      - name: Running ESlint
+        run:
+          npm run lint:no-fix

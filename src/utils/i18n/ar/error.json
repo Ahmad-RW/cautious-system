@@ -1,0 +1,25 @@
+{
+    "exceptions": {
+        "forbidden": "الوصول غير مصرّح",
+        "unauthorized": "غير مصرّح. الرجاء تسجيل الدخول",
+        "notFound": "غير موجود",
+        "unprocessableEntity": "معطيات غير صحيحة",
+        "notImplemented": "غير مطبقه",
+        "badRequest": "طلب غير صالح"
+    },
+    "invalidToken": "الرمز المرسل غير صحيح",
+    "invalidEmail": "البريد الإلكتروني غير صالح",
+    "emailDoesntExist": "البريد الإلكتروني غير مسجل في النظام",
+    "accountAlreadyActivated": "تم التحقق من الحساب مسبقا",
+    "fileDoesntExist": "الملف غير موجود",
+    "emailOrUsernameExists": "اسم المستخدم او البريد الإلكتروني غير متاح",
+    "auth":{
+        "newPasswordEqualsOld" : "كلمة المرور الجديدة يجب ان لا تساوي القديمة",
+        "currentPasswordNotCorrect" : "كلمة المرور الحالية غير صحيحة"
+    },
+    "invalidTimezone": " رمز المنطقة الزمنية ليس صحيحًا",
+    "transition": "{to} إلى {from} لايمكن التحويل من حالة",
+    "invalidUsername": "اسم المستخدم يحتوي على مدخلات غير صحيحه",
+    "validType": "الرجاء إدخال نوع صحيح",
+    "weakPassword": "كلمة المرور ضعيفة جدا"
+}
