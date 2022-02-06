@@ -34,7 +34,7 @@ jobs:
         run: |
           APP_RELEASE=$(date +"1.%y%m%d.%H%M%S" | sed -E 's/\.0{1,3}/./g')
 
-          docker build --cache-from $REGISTRY/ahmad-rw/stg-ctb:latest --cache-from $REGISTRY/ahmad-rw/stg-cyberhub-assets-builder:latest -t $REGISTRY/ahmad-rw/stg-ctb:$APP_RELEASE -t $REGISTRY/ahmad-rw/stg-ctb:$IMAGE_TAG -t $REGISTRY/ahmad-rw/stg-ctb:latest -f fpm.Dockerfile .
+          docker build --cache-from $REGISTRY/ahmad-rw/stg-ctb:latest --cache-from $REGISTRY/ahmad-rw/stg-cyberhub-assets-builder:latest -t $REGISTRY/ahmad-rw/stg-ctb:$APP_RELEASE -t $REGISTRY/ahmad-rw/stg-ctb:$IMAGE_TAG -t $REGISTRY/ahmad-rw/stg-ctb:latest -f docker/Dockerfile ..
           docker push $REGISTRY/ahmad-rw/stg-ctb:$IMAGE_TAG
           docker push $REGISTRY/ahmad-rw/stg-ctb:latest
           docker push $REGISTRY/ahmad-rw/stg-ctb:$APP_RELEASE
